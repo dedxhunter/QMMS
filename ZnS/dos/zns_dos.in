@@ -1,0 +1,7 @@
+&DOS
+prefix = 'ZnS_relax',
+outdir='/scratch/22gg91j21/spha/pseudo/output',
+fildos ='zn_dos.dat',
+emax =  5.00000e+01,
+emin = -5.00000e+01
+/

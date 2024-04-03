@@ -1,0 +1,40 @@
+&CONTROL
+calculation='scf'
+prefix      = "dec"
+pseudo_dir='/scratch/22gg91j21/spha/pseudo/'
+outdir='/scratch/22gg91j21/spha/dielcons/pseudo/output',
+verbosity = 'high'
+/
+
+&SYSTEM
+ibrav=1
+a = 5.441778,
+ecutwfc=  4.40000e+01,
+nat=8,
+ntyp=2,
+nspin=1,
+nbnd = 52
+/
+&ELECTRONS
+
+mixing_beta= 0.7
+
+/
+
+ATOMIC_SPECIES
+Zn 65.38    Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+S  32.065   S.pbe-nl-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (angstrom)
+
+Zn          0.000000           0.000000           0.000000
+Zn          0.000000           2.720889           2.720889
+Zn          2.720889           0.000000           2.720889
+Zn          2.720889           2.720889           0.000000
+S           1.360446           1.360446           1.360446
+S           1.360446           4.081332           4.081332
+S           4.081332           1.360446           4.081332
+S           4.081332           4.081332           1.360446
+
+K_POINTS (AUTOMATIC)
+8 8 8 0 0 0

@@ -1,0 +1,15 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shakti
+SLURM_JOB_ACCOUNT = mrugankagg
+SLURM_JOB_ID = 1139697
+SLURM_JOB_NAME = Qmms
+SLURM_JOB_NODELIST = cn[153-154,341-343]
+SLURM_JOB_USER = 22gg91j21
+SLURM_JOB_UID = 7039
+SLURM_JOB_PARTITION = standard-low
+SLURM_TASK_PID = 240127
+SLURM_SUBMIT_DIR = /scratch/22gg91j21/spha/dielcons
+SLURM_CPUS_ON_NODE = 3
+SLURM_NTASKS = 24
+SLURM_TASK_PID = 240127
+==========================================

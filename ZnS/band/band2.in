@@ -1,0 +1,67 @@
+&CONTROL
+calculation = 'bands'
+max_seconds =  8.64000e+04
+title='Optimization of ZnS unit cell'
+restart_mode='from_scratch',
+prefix      = "ZnS_relax"
+pseudo_dir  = '/scratch/22gg91j21/spha/band/pseudo',
+outdir= '/scratch/22gg91j21/spha/pseudo/output',
+tprnfor     = .TRUE.
+tstress     = .TRUE.
+verbosity = 'high'
+/
+
+&SYSTEM
+ibrav = 1
+a = 5.44178e+00
+nat = 8,
+ntyp = 2,
+nspin = 1,
+nbnd = 52,
+degauss     =  1.00000e-02
+ecutrho     =  4.73000e+02
+ecutwfc     =  4.40000e+01
+occupations = 'fixed',
+smearing    = 'gaussian',
+degauss     =  1.00000e-02
+/
+
+&ELECTRONS
+conv_thr         =  1.00000e-06
+electron_maxstep = 200
+mixing_beta      =  7.00000e-01
+startingpot      = "atomic"
+startingwfc      = "atomic+random"
+/
+
+&BANDS
+lsym           = .FALSE.
+spin_component = 1
+/
+
+ATOMIC_SPECIES
+
+Zn     65.38  Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+S      32.065  S.pbe-nl-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {angstrom}
+
+Zn      0.000000   0.000000   0.000000
+Zn      0.000000   2.720889   2.720889
+Zn      2.720889   0.000000   2.720889
+Zn      2.720889   2.720889   0.000000
+S       1.360446   1.360446   1.360446
+S       1.360446   4.081332   4.081332
+S       4.081332   1.360446   4.081332
+S       4.081332   4.081332   1.360446
+
+K_POINTS {tpiba_b}
+8
+gG     20
+X      20
+M      20
+gG     20
+R      20
+X      0
+M      20
+R      0

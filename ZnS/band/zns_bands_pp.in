@@ -1,0 +1,5 @@
+&BANDS
+  prefix = "ZnS_relax"
+  outdir = '/scratch/22gg91j21/spha/pseudo/output'
+  filband = 'zns_bands.dat'
+/

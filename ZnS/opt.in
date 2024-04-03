@@ -1,0 +1,58 @@
+&CONTROL
+calculation   = "vc-relax"
+forc_conv_thr =  1.00000e-04
+max_seconds   =  1.72800e+05
+nstep         = 100
+pseudo_dir    ='/scratch/22gg91j21/spha/pseudo'
+tprnfor       = .TRUE.
+tstress       = .TRUE.
+/
+
+&SYSTEM
+a           =  5.44178e+00
+degauss     =  1.00000e-02
+ecutrho     =  4.73000e+02
+ecutwfc     =  4.30000e+01
+ibrav       = 1
+nat         = 8
+nbnd        = 54
+ntyp        = 2
+occupations = "fixed"
+smearing    = "gaussian"
+/
+
+&ELECTRONS
+conv_thr         =  1.00000e-06
+electron_maxstep = 200
+mixing_beta      =  7.00000e-01
+startingpot      = "atomic"
+startingwfc      = "atomic+random"
+/
+
+&IONS
+ion_dynamics = "bfgs"
+/
+
+&CELL
+cell_dynamics  = "bfgs"
+press_conv_thr =  2.00000e-01
+/
+
+K_POINTS {automatic}
+ 8  8  8  0 0 0
+
+ATOMIC_SPECIES
+Zn     65.39000  Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+S      32.06600  S.pbe-nl-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Zn      0.000000   0.000000   0.000000
+Zn      0.000000   2.720889   2.720889
+Zn      2.720889   0.000000   2.720889
+Zn      2.720889   2.720889   0.000000
+S       1.360446   1.360446   1.360446
+S       1.360446   4.081332   4.081332
+S       4.081332   1.360446   4.081332
+S       4.081332   4.081332   1.360446
+
+

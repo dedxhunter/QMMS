@@ -1,0 +1,68 @@
+&CONTROL
+calculation='relax'
+forc_conv_thr =  1.00000e-04
+max_seconds   =  1.72800e+05
+title='Optimization of ZnS unit cell'
+restart_mode='from_scratch',
+prefix      = "ZnS_relax"
+etot_conv_thr=1.0D-04
+forc_conv_thr=1.0D-03
+nstep=100
+pseudo_dir='/scratch/22gg91j21/spha/pseudo'
+outdir='/scratch/22gg91j21/spha/pseudo/output'
+tprnfor       = .TRUE.
+tstress       = .TRUE.
+/
+
+&SYSTEM
+ibrav=1
+a = 5.44178e+00
+nat=8,
+ntyp=2,
+nspin=1,
+ecutrho=  4.73000e+02
+ecutwfc=  4.40000e+01
+occupations='fixed',
+smearing='gaussian',
+degauss=1.00000e-02
+nosym=.true
+/
+
+&ELECTRONS
+
+conv_thr         =  1.00000e-06
+electron_maxstep = 200
+mixing_beta      =  7.00000e-01
+startingpot      = 'atomic'
+startingwfc      = 'atomic+random',
+
+/
+&IONS
+
+ion_dynamics='bfgs'
+/
+
+&CELL
+cell_dynamics='bfgs',
+press_conv_thr =  2.00000e-01
+
+/
+ATOMIC_SPECIES
+Zn 65.38    Zn.pbe-dnl-rrkjus_psl.1.0.0.UPF
+S  32.065   S.pbe-nl-rrkjus_psl.1.0.0.UPF 
+
+ATOMIC_POSITIONS (angstrom)
+
+Zn      0.000000   0.000000   0.000000
+Zn      0.000000   2.720889   2.720889
+Zn      2.720889   0.000000   2.720889
+Zn      2.720889   2.720889   0.000000
+S       1.360446   1.360446   1.360446
+S       1.360446   4.081332   4.081332
+S       4.081332   1.360446   4.081332
+S       4.081332   4.081332   1.360446
+
+
+
+K_POINTS (AUTOMATIC)
+8 8 8 0 0 0

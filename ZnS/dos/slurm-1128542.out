@@ -1,0 +1,15 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shakti
+SLURM_JOB_ACCOUNT = mrugankagg
+SLURM_JOB_ID = 1128542
+SLURM_JOB_NAME = 35_7
+SLURM_JOB_NODELIST = cn073
+SLURM_JOB_USER = 22gg91j21
+SLURM_JOB_UID = 7039
+SLURM_JOB_PARTITION = standard-low
+SLURM_TASK_PID = 109715
+SLURM_SUBMIT_DIR = /scratch/22gg91j21/spha/dos
+SLURM_CPUS_ON_NODE = 24
+SLURM_NTASKS = 24
+SLURM_TASK_PID = 109715
+==========================================
